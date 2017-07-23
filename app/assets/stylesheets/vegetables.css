@@ -1,0 +1,265 @@
+.color {
+    color: #4797BC;
+    font-weight: bold;
+    width: 100%;
+}
+.button::-webkit-input-placeholder {
+    color: #ccc;
+    font-weight: normal;
+}
+}
+.button:-ms-input-placeholder {
+    color: #ccc;
+    font-weight: normal;
+}
+.button::-moz-placeholder {
+    color: #ccc;
+    font-weight: normal;
+}
+
+
+.introduce1{
+  height: 400px;
+
+  background: url('Airagri_index.jpg') no-repeat;background-size:cover;
+}
+
+.introduce2{
+  height: 200px;
+  width:300px;
+  margin: 80px ;
+  margin-top: 170px;
+  float:left;
+}
+.introduce3{
+  height: 200px;
+  width:300px;
+  margin: 80px ;
+  margin-top: 120px ;
+
+  float:left;
+
+}
+.introduce4{
+  height: 200px;
+  width:300px;
+  margin: 80px ;
+  margin-top: 120px ;
+  float:left;
+}
+
+.explaine1{
+ float: right;
+ width:300px;
+ margin: 190px;
+ margin-right: 40px;
+ color: white;
+ text-shadow:0px 5px 10px #474644;
+
+
+
+}
+.explaine2{
+  width:300px;
+
+}
+.explaine3{
+  width:300px;
+}
+.explaine4{
+  width:300px;
+}
+
+.pickup{
+  border:outset 2px #01ceb0;
+  color: white;
+  background-color:#01ceb0;
+  margin:0px auto;
+  margin-top: 80px;
+  font:oblique "ＭＳ ゴシック";
+  font-weight: 400;
+  font-weight: bold;
+  height: 50px;
+  text-align: center;
+  width:150px;
+  line-height: 50px;
+  text-decoration:none ;
+  border-radius: 5px;
+}
+
+.hoge{
+  height: 600px;
+  background-color:white;
+}
+.contents_row{
+  background-color:#fafafa;
+  margin-top:30px;
+  margin: 30px auto;
+  height:auto;
+}
+
+.content_post{
+  margin: 30px auto;
+}
+
+.field{
+  margin: 0px auto;
+  width:400px;
+  text-align: center;
+}
+.actions{
+ margin: 0px auto;
+ width:400px;
+ text-align: center;}
+
+ .sell_page{
+  width:400px;
+  margin: 5px auto;
+}
+
+.sell_advice{
+  font-size: 8px;
+  margin: 0px ;
+  margin-left: 0px;
+   margin-right: 270px;
+   width:400px;
+   height: 60px;
+}
+.sell_frame{
+  width:300px;
+  height: 40px;
+  margin: 20px auto;
+   margin-right: 270px;
+   margin-top: 30px;
+
+}
+.sell_image{
+  width:500px;
+  height: 20px;
+  margin: 15px auto;
+  margin-top: 5px;
+  text-align: left;
+   margin-right: 270px;
+   font-size: 10px;
+   font:oblique "ＭＳ ゴシック";
+}
+
+.photo_area{
+  font-size: 16px;
+   margin: 5px auto;
+
+    padding-top: 20px;
+    padding-top: 0px;
+  height: 20px;
+}
+.sell_detail{
+  width:300px;
+  height: 200px;
+  margin: 5px auto;
+    margin-right: 270px;
+    padding-top: 20px;
+
+}
+.sell_submit{
+  width:345px;
+  border:outset 2px #01ceb0;
+  background-color:white;
+  color: #01ceb0;
+  height: 25px;
+  margin: 5px auto;
+  margin-top:50px;
+  margin-left: 0px;
+ text-align: center;
+}
+
+.col10{
+  margin:100px left;
+  margin-left: 0px;
+  text-align: left;
+}
+
+#vegetable_text{
+  width: 340px;
+  height: 200px;
+  box-sizing: border-box;
+}
+
+#vegetable_text::-webkit-input-placeholder::after {
+    display: block;
+    content: "例）屋内の清潔な農場でで耕栽培していますので、菌類・\a害虫・汚染物質の付着が殆どなく、安心して食べて頂けます！";
+}
+.field{
+  width:400px;
+}
+.user_email{
+  width:400px;
+}
+
+.action{
+float:right;
+border:outset 2px #01ceb0;
+color: white;
+background-color:#01ceb0;
+margin: auto;
+font:oblique "ＭＳ ゴシック";
+font-weight: 400;
+font-weight: bold;
+height: 30px;
+text-align: center;
+width:120px;
+border-radius: 5px;
+font-size: 15px;
+}
+
+.log_in_entry{
+border:outset 2px #01ceb0;
+color: #01ceb0;
+background-color:white;
+margin:10px auto;
+font:oblique "ＭＳ ゴシック";
+font-weight: 400;
+font-weight: bold;
+height: 30px;
+text-align: center;
+width:120px;
+border-radius: 5px;
+font-size: 15px;
+z-index: 1;
+}
+
+
+.cant_login .a {
+  color:black;
+margin: auto;
+font:oblique "ＭＳ ゴシック";
+font-weight: 400;
+font-weight: bold;
+height: 30px;
+text-align: center;
+width:200px;
+border-radius: 5px;
+font-size: 15px;
+}
+
+
+.cant_login{
+  font-size: 13px;
+  color:#A9A9A9;
+}
+.get{
+  margin: 0px;
+  color:white;
+  text-decoration: none;
+  vertical-align: middle;
+  margin-top: 10px;
+}
+
+.do_action{
+
+  font-family: "ＭＳ　ゴシック",fantasy;
+}
+
+.a{
+  font-size: 13px;
+  color:#A9A9A9;
+}

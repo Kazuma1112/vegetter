@@ -1,0 +1,112 @@
+
+
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+.body{
+  font:oblique "ＭＳ ゴシック";
+}
+ .post_entry{
+  float:right;
+  border:outset 2px #01ceb0;
+  color: white;
+  background-color:#01ceb0;
+  margin:30px;
+  margin-top: 0px;
+  font:oblique "ＭＳ ゴシック";
+  font-weight: 400;
+  font-weight: bold;
+  height: 50px;
+  text-align: center;
+  width:150px;
+  line-height: 50px;
+  text-decoration:none ;
+  border-radius: 5px;
+
+}
+.header{
+  float:right;
+}
+.header__bar_row{
+  margin: 0px;
+
+}
+
+.user_nav{
+  float: right;
+  margin: 0px;
+  height: 30px;
+  width:400px;
+}
+.get{
+  margin: 0px;
+  color:white;
+  text-decoration: none;
+  vertical-align: middle;
+  margin-top: 10px;
+}
+
+.nickname{
+  font-size: 15px;
+  height: 20px;
+  width: 200px;
+  margin-top: 5px;
+  float:right;
+  text-align: right;
+  color:black;
+}
+.user__info{
+/*  vertical-align: middle;
+*/
+float:right;
+border:outset 2px #01ceb0;
+color: white;
+background-color:#01ceb0;
+margin:0px;
+margin-left: 5px;
+font:oblique "ＭＳ ゴシック";
+font-weight: 400;
+font-weight: bold;
+height: 30px;
+text-align: center;
+width:120px;
+border-radius: 5px;
+font-size: 15px;
+}
+
+.post{
+ margin: 0px;
+ color:white;
+ text-decoration: none
+}
+
+.grid-6{
+  font-family: "ＭＳ　ゴシック",fantasy;
+  font-weight: 400;
+  color:#01ceb0;
+}
+
+.title:link { color:#01ceb0; text-decoration:none }
+.title:visited { color:#01ceb0; text-decoration:none }
+.title:hover { color:#01ceb0; text-decoration:none }
+.title:active { color:#01ceb0; text-decoration:none }
+
+
+.a:link { color:white;  }
+.user_nav:visited { color:#01ceb0; }
+.user_nav:hover { color:#01ceb0; text-decoration:none; }
+.user_nav:active { color:#01ceb0; text-decoration:none; }
+*= require dropzone/basic
+*= require dropzone/dropzone
+

@@ -1,0 +1,57 @@
+<div class="sell_page">
+  <%= form_for @vegetables do |f| %>
+  <div class="sell_frame">
+    <%f.label :name%> 商品名<br>
+    <%=f.text_field :name,  style: 'width: 340px;height: 20px;',placeholder: '商品名で美味しさをアピール！'%>
+  </div>
+
+<div class="sell_advice">
+    <div class="photo_area"><%=f.label:写真%>
+  <div style="font-size: 10px; margin-top: 5px;"></div>
+</div>
+    写真は４枚載せてください<br>写真撮影はできるだけ太陽光を当てて撮ると美味しさが引き立ちます！
+  </div>
+
+  <div class="sell_image">１つ目の写真を載せてください！<br>
+    <%f.label :image1%>
+    <%= f.file_field :image1 %>
+  </div>
+
+  <div class="sell_image">２つ目の写真を載せてください！<br>
+    <%f.label :image2%>
+    <%= f.file_field :image2 %>
+  </div>
+
+  <div class="sell_image">３つ目の写真を載せてください！<br>
+    <%f.label :image3%>
+    <%= f.file_field :image3 %>
+  </div>
+
+  <div class="sell_image">４つ目の写真を載せてください！<br>
+    <%f.label :image4%>
+    <%= f.file_field :image4 %>
+
+  </div>
+  <div class="sell_frame" >
+  <%f.label :price%> 価格<br>
+    <%=f.text_field :price,  style: 'width: 340px;height: 20px;',placeholder: '(例)1000'%>
+
+  <div class="sell_detail">
+  <%=f.label:商品説明%>
+  <div style="font-size: 10px; margin-top: 5px;">
+    特徴やこだわりなど、自慢の商品をアピールしましょう！
+  </div>
+  <%=f.text_area  :text, placeholder: '(例)屋内の清潔な農場でで耕栽培していますので、菌類・害虫・汚染物質の付着が殆どなく、安心して食べて頂けます。！' %>' %>
+
+  <%= f.hidden_field :user_id, value: current_user.id %>
+
+  </div>
+    <div class="col10">
+
+      <%= button_tag type: "submit", class: "sell_submit" do %>
+      出品を完了する<i class="icon-arrow-right"></i>
+      <% end %>
+  <%end%>
+
+    </div>
+</div>

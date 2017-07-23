@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Air Agri</title>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <script type="text/javascript">
+      WebFontConfig = {
+        google: { families: [ 'Unica+One::latin' ] }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+    </script>
+  </head>
+
+ <body class="body">
+<header>
+    <h1 class="grid-6" ><a class="title" href="/">Air Agri</a>
+
+
+<% if user_signed_in? %>
+
+ <div class="user_nav ">
+    <div class="user__info">
+     <a class = 'get'href="/users/<%= current_user.id %>">マイページ</a>
+      </div>
+        <div class="user__info" style type="text/css">
+        <%= link_to "ログアウト", destroy_user_session_path ,method: :delete ,class: 'get'%>
+        </div>
+        <div class="user__info">
+        <%= link_to "出品する", new_vegetable_path,class: 'get' %>
+         </div>
+
+
+          </div>
+          <div class="nickname">ようこそ<%= current_user.nickname%>さん</div>
+
+<% else %>
+   <div class="user__info">
+    <%= link_to "ログイン", new_user_session_path, class: 'post'%>
+     </div>
+      <div class="user__info"><%= link_to "新規会員登録", new_user_registration_path,class: 'post' %>
+   </div>
+
+<% end %>
+</h1>
+</header>
+
+
+    <%= yield %>
+
+    <footer>
+      <p>
+        Copyright Air Agri 2017.
+      </p>
+    </footer>
+  </body>
+</html>
