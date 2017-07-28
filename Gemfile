@@ -53,3 +53,4 @@ gem 'devise'
 
 gem 'dropzonejs-rails', '~> 0.7.3'
 gem 'paperclip'
+gem 'payjp'

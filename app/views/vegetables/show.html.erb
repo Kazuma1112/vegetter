@@ -1,0 +1,87 @@
+
+<div class="vegetable_page">
+  <div class="vegetable_name"> <%= @vegetable.name %></div>
+  <div class="my_vegetable_list">
+   <% @vegetable.vegetable_images.each do |image| %>
+   <%= image_tag image.image, class: 'user_vegetables' %>
+   <% end %>
+</div>
+
+
+<table class="sell_table" border="1">
+  <tr >
+    <td class="seller_nickname1">出品農家</td>
+    <td class="seller_nickname2"><%= @vegetable.user.nickname %></td>
+  </tr>
+  <tr>
+    <td  class="detail_text1">商品の特徴・<br>こだわり</td>
+    <td  class="detail_text2"><%=@vegetable.text %></td>
+  </tr>
+  <tr>
+  <td class="seller_nickname1">価格</td>
+    <td class="seller_nickname2"><%= @vegetable.price %></td>
+    </tr>
+</table>
+ <a  class='post_review' href="/vegetables/<%=@vegetable.id%>/reviews/new">レビューを投稿する</a>
+
+      <div>
+       <%= link_to "この野菜をお気に入り", add_vegetable_path, method: :post %>
+      </div>
+      <div class="container">
+
+    <!-- ここからフォーム -->
+
+  </div>
+
+<div class="reviews">
+ <% @vegetable.reviews.each do |review| %>
+   <h3 class="text-xsmall text-overflow" title="<%= review.nickname %>">
+      <%= review.nickname %>さんの書いたレビュー
+   </h3>
+      <p class="text-small">
+        <span class="rating-star"><i class="star-actived rate-[ここに評価を表示]0"></i></span>
+      </p>
+      <p>総合評価　　　
+       <span class="rate rate<%= review.general_rate %>"></span>
+
+      </p>
+      <p>味の納得感　　
+      <span class="rate rate<%= review.taste_rate %>"></span>
+       </p>
+      <p>見た目の正確さ
+      <span class="rate rate<%= review.visual_rate %>"></span>
+      </p>
+      <p>出品農家の対応
+      <span class="rate rate<%= review.communication_rate %>"></span>
+      </p>
+      <p>購入した感想<br>
+        <%= review.comment %>
+      </p>
+ <% end %>
+</div>
+<%= form_tag(action: :purchase, method: :post) do %>
+  <script type="text/javascript" src="https://checkout.pay.jp" class="payjp-button" data-key="<%=  PYAJP_PUBLIC_KEY%>"></script>
+<% end %>
+
+ <% if current_user %>
+      <%= form_tag("/vegetables/#{@vegetable.id}/comments", method: :post) do %>
+        <textarea cols="30" name="text" placeholder="コメントする" rows="2"></textarea>
+        <input type="submit" value="SENT">
+      <% end %>
+    <% end %>
+<div class="comments">
+      <h4>＜コメント一覧＞</h4>
+      <% if @comments %>
+        <% @comments.each do |comment| %>
+          <p>
+            <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
+            <%= comment.text %>
+          </p>
+        <% end %>
+      <% end %>
+    </div>
+
+</div>
+
+
+

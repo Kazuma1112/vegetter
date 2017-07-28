@@ -1,7 +1,57 @@
-.my_icon{
-  width:100px;
+img.my_icon{
+  width:400px;
+  height:200px;
+  margin:  0px auto;
+  text-align: center;
 }
 
 .my_vegetables{
+border:outset 2px #01ceb0;
+color: #01ceb0;
+background-color:white;
+margin:10px auto;
+font:oblique "ＭＳ ゴシック";
+font-weight: 400;
+font-weight: bold;
+height: 30px;
+text-align: center;
+width:120px;
+border-radius: 5px;
+font-size: 15px;
+text-decoration: none;
+}
+
+.user_page{
+  margin: 0px auto;
+  text-align: center;
+}
+
+
+.user_vegetables{
+  width:200px;
+  margin-left:0px;
+}
+
+.user_page-header{
+  text-align:center;
+  margin: 0px auto;
+  padding: 0px auto;
+}
+
+.my_leftlist{
+  float:left;
   border:solid 1px;
+ /* margin:100px auto;*/
+/*  margin-left:*/
+}
+
+.my_rightlist{
+  float:right;
+  border:solid 1px;
+/*  margin:100px;*/
+/*  margin-left:0px auto;*/
+}
+
+.my_list{
+  width:1000px;
 }

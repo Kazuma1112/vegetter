@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   # validates :nickname, :phone, :email, :password, presence: true
   validates :nickname, :phone, presence: true
   has_many :vegetables, dependent: :destroy
-
+  has_many :favorites
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

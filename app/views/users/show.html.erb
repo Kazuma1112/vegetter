@@ -1,18 +1,45 @@
-<div class="user_page">
- <h2><%=  current_user.nickname %> <span>さんのマイページ</span></h2>
- <header class="user_page-header">
+<div class="sell_page"
+   <h2><%= current_user.nickname %>
+     <span class="my_icon">さんのマイページ</span>
+   </h2>
+    <header class="user_page-header">
+      <%= image_tag current_user.avatar, class: "my_icon"%>
+        <div class="my_vegetables">出品中の商品</div>
+      <%= link_to "商品一覧",'/users/:user_id/all'%>
+    </header>
+      <div class="my_list">
+        <div class="my_leftlist">
 
-    <a href="">
-      <div class="user_image"><%= image_tag  current_user.avatar, class: "my_icon"%></div>
- <div class="my_vegetables">出品中の商品
-
-    <% @vegetables.each do |vegetable|%>
-
-        <%= simple_format(vegetable.text) %>
-        <span class="name clearfix"><%= vegetable.name %></span>
-        <%= image_tag vegetable.image1 %>
-    <%end%>
- </div>
-  </a>
-</header>
+          <% @vegetables.each do |vegetable|%>
+            <div class="user_vegetables">
+              <%= simple_format(vegetable.text) %>
+                <span class="name clearfix">
+                 <a href="/vegetables/<%= vegetable.id %>"> <%= vegetable.name %></a>
+                </span>
+            </div>
+            <% vegetable.vegetable_images.each do |image|%>
+              <% if image.status == 0 %>
+                <div class="my_vegetable_list"><%= image_tag image.image, class: 'user_vegetables' %>
+                </div>
+               <% end %>
+             <% end %>
+             <% end -%>
+        <div>
+          <% @favorites.each do |favorite|%>
+            <div class="user_vegetables">
+                <span class="name clearfix">
+                 <a href= vegetable_path > <%= favorite.vegetables.name %></a>
+                </span>
+            </div>
+               <% @favorites.each do |favorite|%>
+                  <%if favorite.user_id == current_user.id && favorite.vegetable_image.status == 0%>
+                   <a href="/vegetables/<%= @vegetables.id %>"> <%= favorite.name %></a>
+                     <%= favorite.vegetable_images.image %>
+                   <% end -%>
+              <% end %>
+           <% end %>
+            </div>
+         </div>
+      </div>
+</div>
 

@@ -1,11 +1,8 @@
 class UsersController < ApplicationController
-
   def show
-
-# @vegetables = Vegetable.all
-@vegetables = User.find(params[:id]).vegetables
-
-   vegetables_ids = Vegetable.group(:user_id).count(:user_id)
-
- end
+    user = User.find(params[:id])
+    @vegetables = user.vegetables.order('id ASC').limit(5)
+    @favorites = user.favorites
+  end
 end
+

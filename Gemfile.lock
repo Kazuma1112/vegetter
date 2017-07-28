@@ -71,6 +71,8 @@ GEM
       railties (>= 4.1.0, < 5.2)
       responders
       warden (~> 1.2.3)
+    domain_name (0.5.20170404)
+      unf (>= 0.0.5, < 1.0.0)
     dropzonejs-rails (0.7.4)
       rails (> 3.1)
     erubis (2.7.0)
@@ -79,6 +81,8 @@ GEM
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     hike (1.2.3)
+    http-cookie (1.0.3)
+      domain_name (~> 0.5)
     i18n (0.8.6)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
@@ -101,6 +105,7 @@ GEM
     minitest (5.10.2)
     multi_json (1.12.1)
     mysql2 (0.3.18)
+    netrc (0.11.0)
     nokogiri (1.8.0)
       mini_portile2 (~> 2.2.0)
     orm_adapter (0.5.0)
@@ -110,6 +115,8 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (~> 0.3.0)
+    payjp (0.0.5)
+      rest-client (~> 2.0)
     pry (0.10.4)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -148,6 +155,10 @@ GEM
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
+    rest-client (2.0.2)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 4.0)
+      netrc (~> 0.8)
     rmagick (2.16.0)
     sass (3.2.19)
     sass-rails (4.0.5)
@@ -180,6 +191,9 @@ GEM
       thread_safe (~> 0.1)
     uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.4)
     warden (1.2.7)
       rack (>= 1.0)
     web-console (2.3.0)
@@ -202,6 +216,7 @@ DEPENDENCIES
   jquery-rails
   mysql2 (= 0.3.18)
   paperclip
+  payjp
   pry-rails
   rails (= 4.2.6)
   rmagick (= 2.16.0)

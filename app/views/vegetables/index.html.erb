@@ -26,5 +26,29 @@
 
 <div class="contents_row">
 <div class="pickup">ピックアップ商品</div>
+<% @vegetables.each do |vegetable| %>
+                  <div class="col">
+                    <a href="/vegetables/<%= vegetable.id %>"></a>
+                      <h3 class="text-xsmall text-overflow" title="<vegetable.name>"><a href="/vegetables/<%= vegetable.id %>">
+                      <%= vegetable.name%>
+                      </h3>
+                      <p class="text-small">
+                        <%if vegetable.reviews.present?%>
+                        <!-- <span class="rating-star">
 
+                        <%%> -->
+                       <span class="rate rate-<%= vegetable.reviews.general_rate %>"></span>
+                        <% end %>
+                      </p>
+
+
+                  <% vegetable.vegetable_images.each do |image| %>
+         <% if image.status == 0 %>
+           <div class="my_vegetable_list">
+            <%= image_tag image.image, class: 'user_vegetables' %>
+           </div>
+         <% end %>
+       <% end %>
+   <% end %>
+ </div>
 </div>
