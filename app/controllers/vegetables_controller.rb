@@ -1,4 +1,5 @@
-class VegetablesController < ApplicationController
+class VegetablesController < RankingController
+
 
   def index
     @vegetables = Vegetable.order('id ASC').limit(10)

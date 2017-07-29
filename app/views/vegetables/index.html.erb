@@ -25,7 +25,31 @@
 </div>
 
 <div class="contents_row">
-<div class="pickup">ピックアップ商品</div>
+
+
+<!-- ランキング表示 -->
+<% @ranking.each.with_index(1) do |vegetable, i| %>
+          <li data-cinema-id="346394">
+            <a href="/vegetables/<%= vegetable.id %>">
+              <div class="box">
+                <div class="box__cell w40 align-center">
+                  <p class="label bgcolor-gray-lighter align-center">
+                    <%= i %>
+                  </p>
+                </div>
+               <div>
+                  <%=vegetable.title %>
+                  </p>
+                  <% if vegetable_image.status == 0 %>
+                  <img src="<%= vegetable.vegetable_image.imgae %>" alt="">
+                </div>
+              </div>
+            </a>
+          </li>
+          <% end %>
+          <% end -%>
+<!-- 新着商品 -->
+<div class="pickup">新着商品</div>
 <% @vegetables.each do |vegetable| %>
                   <div class="col">
                     <a href="/vegetables/<%= vegetable.id %>"></a>
