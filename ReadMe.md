@@ -49,7 +49,7 @@
 - created_at
 - updated_at
 
-## association:
+## association
 - belongs_to: user
 - has_many: vegetable_images
 - has_many: comments
@@ -64,7 +64,7 @@
 - created_at
 - updated_at
 
-## association:
+## association
 - belong_to: vegetable
 
 # review
