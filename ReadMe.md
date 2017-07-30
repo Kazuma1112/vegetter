@@ -67,7 +67,7 @@
 ## association:
 - belong_to: vegetable
 
-# zreview
+# review
 ## Table Structure
 - user_id
 - vegetable_id
