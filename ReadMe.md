@@ -10,9 +10,9 @@
 - updated_at
 
 ## association
--has_one: review
--belongs_to: user
--belongs_to: vegetable
+- has_one: review
+- belongs_to: user
+- belongs_to: vegetable
 
 # favorites
 ## Table Tstracture
@@ -50,10 +50,10 @@
 - updated_at
 
 ## association:
--belongs_to: user
--has_many: vegetable_images
--has_many: comments
--has_many: reviews
+- belongs_to: user
+- has_many: vegetable_images
+- has_many: comments
+- has_many: reviews
 
 # vegetable_image
 
@@ -65,22 +65,22 @@
 - updated_at
 
 ## association:
--belong_to: vegetable
+- belong_to: vegetable
 
 #review
 ## Table Structure
- - user_id
- - vegetable_id
- - comment_id
- - general_rate
- - taste_rate
- - communication_rate
- - visual_rate
+- user_id
+- vegetable_id
+- comment_id
+- general_rate
+- taste_rate
+- communication_rate
+- visual_rate
 
 ## association
--belongs_to: vegetable
--belongs_to: user
--belongs_to: comment
+- belongs_to: vegetable
+- belongs_to: user
+- belongs_to: comment
 
 # purchase
 ## Table Structure
@@ -90,9 +90,9 @@
 - updated_at
 
 ## association:
- -belongs_to: user
- -belongs_to: vegetable
+- belongs_to: user
+- belongs_to: vegetable
 
 
 # tag
--
+- 
