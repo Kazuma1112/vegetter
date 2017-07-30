@@ -89,7 +89,7 @@
 - created_at
 - updated_at
 
-## association:
+## association
 - belongs_to: user
 - belongs_to: vegetable
 
