@@ -1,6 +1,6 @@
 
 # comments
-##tablestracture
+## Table Structure
 
 - user_idgjkglk
 - vegetable_id
@@ -15,29 +15,29 @@
 	belongs_to: vegetable
 
 # favorites
-## tablestracture
+## Table Tstracture
 		 - user_id
 		 - vegetable_id
 		 - created_at
 		 - updated_at
 
-##association
+## Association
 	      - belongs_to :user
 		  - belongs_to :vegetable
 
-- #user
-    ##tablestracture
+# user
+##Tables Sracture
 		 name
 	     phone_number
 
-    ##association
+##association
     	- has_many: vegetables
 		- has_many: comments
 		- has_many: favorites
 		- has_many: purchases
 
 #vegetable
-## tablestracture
+## Table Structure
 		- vegetable_id
 		- user_id
 		- description
@@ -51,19 +51,19 @@
 		has_many: reviews
 
 - #vegetable_image
-    ##tablestracture
+## Table Structure
 		- vegetable_id
 		- content
 		- status
 		- created_at
 		- updated_at
 
-	##association:
+##association:
 		belong_to: vegetable
 
 
 - #review
-    ##tablestracture
+## Table Structure
 	     - user_id
 	     - vegetable_id
 	     - comment_id
@@ -72,13 +72,13 @@
 	     - communication_rate
 	     - visual_rate
 
-	##association
+##association
 			belongs_to: vegetable
 			belongs_to: user
 			belongs_to: comment
 
 #purchase
-##tablestracture
+## Table Structure
 		- user_id
 		- vegetable_id
 		- created_at
