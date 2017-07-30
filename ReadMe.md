@@ -40,7 +40,7 @@
 - has_many: favorites
 - has_many: purchases
 
-#vegetable
+# vegetable
 
 ## Table Structure
 - vegetable_id
