@@ -2,7 +2,7 @@
 # comments
 ## Table Structure
 
-- user_idgjkglk
+- user_id
 - vegetable_id
 - review_id
 - text
@@ -10,84 +10,89 @@
 - updated_at
 
 ## association
-	has_one: review
-	belongs_to: user
-	belongs_to: vegetable
+- has_one: review
+- belongs_to: user
+- belongs_to: vegetable
 
 # favorites
 ## Table Tstracture
-		 - user_id
-		 - vegetable_id
-		 - created_at
-		 - updated_at
+- user_id
+- vegetable_id
+- created_at
+- updated_at
 
 ## Association
-	      - belongs_to :user
-		  - belongs_to :vegetable
+- belongs_to :user
+- belongs_to :vegetable
 
 # user
-##Tables Sracture
-		 name
-	     phone_number
 
-##association
-    	- has_many: vegetables
-		- has_many: comments
-		- has_many: favorites
-		- has_many: purchases
+## Table Tstracture
+- name
+- phone_number
+- created_at
+- updated_at
 
-#vegetable
+
+## association
+- has_many: vegetables
+- has_many: comments
+- has_many: favorites
+- has_many: purchases
+
+# vegetable
+
 ## Table Structure
-		- vegetable_id
-		- user_id
-		- description
-		- created_at
-		- updated_at
+- vegetable_id
+- user_id
+- description
+- created_at
+- updated_at
 
-##association:
-		belongs_to: user
-		has_many: vegetable_images
-		has_many: comments
-		has_many: reviews
+## association
+- belongs_to: user
+- has_many: vegetable_images
+- has_many: comments
+- has_many: reviews
 
-- #vegetable_image
+# vegetable_image
+
 ## Table Structure
-		- vegetable_id
-		- content
-		- status
-		- created_at
-		- updated_at
+- vegetable_id
+- content
+- status
+- created_at
+- updated_at
 
-##association:
-		belong_to: vegetable
+## association
+- belong_to: vegetable
 
-
-- #review
+# review
 ## Table Structure
-	     - user_id
-	     - vegetable_id
-	     - comment_id
-	     - general_rate
-	     - taste_rate
-	     - communication_rate
-	     - visual_rate
+- user_id
+- vegetable_id
+- comment_id
+- general_rate
+- taste_rate
+- communication_rate
+- visual_rate
 
-##association
-			belongs_to: vegetable
-			belongs_to: user
-			belongs_to: comment
+## association
+- belongs_to: vegetable
+- belongs_to: user
+- belongs_to: comment
 
-#purchase
+# purchase
 ## Table Structure
-		- user_id
-		- vegetable_id
-		- created_at
-		- updated_at
+- user_id
+- vegetable_id
+- created_at
+- updated_at
 
-##association:
-		 belongs_to: user
-		 belongs_to: vegetable
+## association
+- belongs_to: user
+- belongs_to: vegetable
 
 
-#tag
-	-
+# tag
+- 
