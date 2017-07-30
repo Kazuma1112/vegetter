@@ -22,8 +22,8 @@
 - updated_at
 
 ## Association
-  - belongs_to :user
-  - belongs_to :vegetable
+- belongs_to :user
+- belongs_to :vegetable
 
 # user
 
@@ -65,7 +65,7 @@
 - updated_at
 
 ## association:
-		-belong_to: vegetable
+-belong_to: vegetable
 
 #review
 ## Table Structure
@@ -95,4 +95,4 @@
 
 
 # tag
-	-
+-
