@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170731122415) do
+ActiveRecord::Schema.define(version: 20170731125055) do
 
   create_table "clips", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -32,13 +32,14 @@ ActiveRecord::Schema.define(version: 20170731122415) do
   create_table "favorites", force: :cascade do |t|
     t.integer  "user_id",            limit: 4
     t.integer  "vegetable_id",       limit: 4
-    t.datetime "created_at",                       null: false
-    t.datetime "updated_at",                       null: false
-    t.text     "vegetable_image_id", limit: 65535
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.integer  "vegetable_image_id", limit: 4
   end
 
   add_index "favorites", ["user_id"], name: "index_favorites_on_user_id", using: :btree
   add_index "favorites", ["vegetable_id"], name: "index_favorites_on_vegetable_id", using: :btree
+  add_index "favorites", ["vegetable_image_id"], name: "index_favorites_on_vegetable_image_id", using: :btree
 
   create_table "purchases", force: :cascade do |t|
     t.datetime "created_at",             null: false
@@ -109,6 +110,7 @@ ActiveRecord::Schema.define(version: 20170731122415) do
   end
 
   add_foreign_key "comments", "reviews"
+  add_foreign_key "favorites", "vegetable_images"
   add_foreign_key "purchases", "users"
   add_foreign_key "purchases", "vegetables"
   add_foreign_key "reviews", "comments"

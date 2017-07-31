@@ -17,12 +17,14 @@
                  <a href="/vegetables/<%= vegetable.id %>"> <%= vegetable.name %></a>
                 </span>
             </div>
+
             <% vegetable.vegetable_images.each do |image|%>
               <% if image.status == 0 %>
                 <div class="my_vegetable_list"><%= image_tag image.content, class: 'user_vegetables' %>
                 </div>
                <% end %>
              <% end %>
+
              <% end -%>
         <div>
           <% @favorites.each do |favorite|%>
@@ -33,6 +35,8 @@
             </div>
                <% @favorites.each do |favorite|%>
                   <%if favorite.user_id == current_user.id && favorite.vegetable_images.status == 0%>
+
+
                    <a href="/vegetables/<%= @vegetables.id %>"> <%= favorite.name %></a>
                      <%= favorite.vegetable_images.content %>
                    <% end -%>
