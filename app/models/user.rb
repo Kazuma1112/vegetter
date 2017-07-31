@@ -1,9 +1,10 @@
-class User < ActiveRecord::Base
+ class User < ActiveRecord::Base
   # validates :nickname, :phone, :email, :password, presence: true
-  validates :nickname, :phone, presence: true
-  has_many :vegetables, dependent: :destroy
+  validates :nickname, :phone_number, presence: true
+  has_many :vegetables
   has_many :favorites
-
+  has_many :comments
+  has_many :purchases
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,

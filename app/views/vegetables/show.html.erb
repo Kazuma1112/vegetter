@@ -3,7 +3,7 @@
   <div class="vegetable_name"> <%= @vegetable.name %></div>
   <div class="my_vegetable_list">
    <% @vegetable.vegetable_images.each do |image| %>
-   <%= image_tag image.image, class: 'user_vegetables' %>
+   <%= image_tag image.content, class: 'user_vegetables' %>
    <% end %>
 </div>
 
@@ -15,7 +15,7 @@
   </tr>
   <tr>
     <td  class="detail_text1">商品の特徴・<br>こだわり</td>
-    <td  class="detail_text2"><%=@vegetable.text %></td>
+    <td  class="detail_text2"><%=@vegetable.description %></td>
   </tr>
   <tr>
   <td class="seller_nickname1">価格</td>

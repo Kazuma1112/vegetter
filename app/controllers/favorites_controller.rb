@@ -11,7 +11,7 @@ class FavoritesController < ApplicationController
   	Favorite.create(
  		user_id: current_user.id,
  		vegetable_id: params[:id],
- 		vegetable_image: main_image.id
+ 		# vegetable_image: main_image.id
 	)
 
  end

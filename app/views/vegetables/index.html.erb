@@ -28,26 +28,6 @@
 
 
 <!-- ランキング表示 -->
-<% @ranking.each.with_index(1) do |vegetable, i| %>
-          <li data-cinema-id="346394">
-            <a href="/vegetables/<%= vegetable.id %>">
-              <div class="box">
-                <div class="box__cell w40 align-center">
-                  <p class="label bgcolor-gray-lighter align-center">
-                    <%= i %>
-                  </p>
-                </div>
-               <div>
-                  <%=vegetable.title %>
-                  </p>
-                  <% if vegetable_image.status == 0 %>
-                  <img src="<%= vegetable.vegetable_image.imgae %>" alt="">
-                </div>
-              </div>
-            </a>
-          </li>
-          <% end %>
-          <% end -%>
 <!-- 新着商品 -->
 <div class="pickup">新着商品</div>
 <% @vegetables.each do |vegetable| %>
@@ -71,7 +51,7 @@
                   <% vegetable.vegetable_images.each do |image| %>
          <% if image.status == 0 %>
            <div class="my_vegetable_list">
-            <%= image_tag image.image, class: 'user_vegetables' %>
+            <%= image_tag image.content, class: 'user_vegetables' %>
            </div>
          <% end %>
        <% end %>

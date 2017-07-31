@@ -15,8 +15,9 @@
 <div class="field">
 
 <div class="status">
+
 <%= f.fields_for :vegetable_images do |image| %>
-    <%= image.file_field :image %>
+    <%= image.file_field :content %>
     <%= image.hidden_field  :status, value: image.index %>
 </div>
 <% end %>
@@ -32,7 +33,7 @@
   <div style="font-size: 10px; margin-top: 5px;">
     特徴やこだわりなど、自慢の商品をアピールしましょう！
   </div>
-  <%=f.text_area  :text, placeholder: '(例)屋内の清潔な農場でで耕栽培していますので、菌類・害虫・汚染物質の付着が殆どなく、安心して食べて頂けます。！' %>' %>
+  <%=f.text_area  :description, placeholder: '(例)屋内の清潔な農場でで耕栽培していますので、菌類・害虫・汚染物質の付着が殆どなく、安心して食べて頂けます。！' %>' %>
 
   <%= f.hidden_field :user_id, value: current_user.id %>
 

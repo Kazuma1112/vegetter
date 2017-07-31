@@ -12,6 +12,6 @@ class ReviewsController < ApplicationController
 
   private
   def create_params
-    params.require(:review).permit(:general_rate, :taste_rate, :visual_rate, :communication_rate, :comment).merge(vegetable_id: params[:vegetable_id], nickname: current_user.nickname)
+    params.require(:review).permit(:general_rate, :taste_rate, :visual_rate, :communication_rate).merge(vegetable_id: params[:vegetable_id], comment_id: params[:comment_id], user_id: params[:user_id] )
   end
 end

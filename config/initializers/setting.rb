@@ -1,0 +1,2 @@
+PYAJP_PUBLIC_KEY = 'pk_test_182081f6e15d9539cebcde26'
+PYAJP_SECRET_KEY = 'sk_test_4fc715b23dfb847644c3f327'

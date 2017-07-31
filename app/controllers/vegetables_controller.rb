@@ -3,6 +3,7 @@ class VegetablesController < RankingController
 
   def index
     @vegetables = Vegetable.order('id ASC').limit(10)
+
   end
 
 
@@ -14,7 +15,7 @@ class VegetablesController < RankingController
   end
 
   def create
-
+  
      Vegetable.create(vegetables_params)
 
   end
@@ -39,8 +40,8 @@ class VegetablesController < RankingController
 
   private
  def vegetables_params
-  params.require(:vegetable).permit(:name, :price, :text, :user_id,
-                                    {vegetable_images_attributes: [:image, :status]})
+  params.require(:vegetable).permit(:name, :price, :description, :user_id,
+                                    {vegetable_images_attributes: [:content, :status]})
  end
 
  def search

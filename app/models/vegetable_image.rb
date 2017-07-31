@@ -1,6 +1,6 @@
 class VegetableImage < ActiveRecord::Base
-  mount_uploader :image, VegetableImageUploader
+  mount_uploader :content, VegetableImageUploader
   belongs_to :vegetable
-  has_many :favorites
+  # has_many :favorites
   # enum status:{main:0, sub:1}
 end
